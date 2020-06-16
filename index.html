@@ -1,0 +1,811 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+    />
+    <link rel="stylesheet" href="css/styles.css" />
+    <link rel="stylesheet" href="css/normalize.css" />
+
+    <title>FEWD Final Project - Mary Nicknish Covid Challenge</title>
+    <link
+      href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,600,700"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.google.com/?category=Sans+Serif&selection.family=Lato:400,600,700"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <header class="covid-header">
+      <h1>
+        Ken and Mary's Covid Challenge
+      </h1>
+      <h2>
+        Walk every street within a 1 mile radius of our house in San Francisco
+      </h2>
+    </header>
+    <div class="map-div">
+      <img
+        class="big-map"
+        src="https://res.cloudinary.com/dft4ibxgp/image/upload/v1590266208/One%20Mile%20Radius/1-Mile_from_14th_Map_gucryh.jpg"
+        alt="1 Mile Radius Map"
+      />
+      <img
+        class="panhandle-camera"
+        id="ph-camera-id"
+        onclick="showSlides(slideIndex=1, `panhandle-slideshow`, `panhandle-photo-position`, `panhandle-slides`, `panhandle-close`, `panhandle-next`, `panhandle-prev`)"
+        src="https://res.cloudinary.com/dft4ibxgp/image/upload/v1590266971/One%20Mile%20Radius/camera_enhance-24px_vvjhfx.svg"
+        alt="Panhandle Camera"
+        />
+      <img
+        class="haight-camera"
+        id="haight-camera-id"
+        onclick="showSlides(slideIndex=1, `haight-slideshow`, `haight-photo-position`, `haight-slides`, `haight-close`,
+      `haight-next`, `haight-prev`)"
+        src="https://res.cloudinary.com/dft4ibxgp/image/upload/v1590266971/One%20Mile%20Radius/camera_enhance-24px_vvjhfx.svg"
+        alt="Haight Camera"
+      />
+      <img
+        class="duboce-camera"
+        id="duboce-camera-id"
+        onclick="showSlides(slideIndex=1, `duboce-slideshow`, `duboce-photo-position`, `duboce-slides`, `duboce-close`, `duboce-next`, `duboce-prev`)"
+        src="https://res.cloudinary.com/dft4ibxgp/image/upload/v1590266971/One%20Mile%20Radius/camera_enhance-24px_vvjhfx.svg"
+        alt="Duboce Camera"
+      />
+      <img
+        class="hayes-camera"
+        id="hayes-camera-id"
+        onclick="showSlides(slideIndex=1, `hayes-slideshow`, `hayes-photo-position`, `hayes-slides`, `hayes-close`, `hayes-next`, `hayes-prev`)"
+        src="https://res.cloudinary.com/dft4ibxgp/image/upload/v1590266971/One%20Mile%20Radius/camera_enhance-24px_vvjhfx.svg"
+        alt="Hayes cole-valley-camera Camera"
+      />
+      <img
+        class="lower-haight-camera"
+        id="lower-haight-camera-id"
+        onclick="showSlides(slideIndex=1, `lower-haight-slideshow`, `lower-haight-photo-position`, `lower-haight-slides`, `lower-haight-close`, `lower-haight-next`, `lower-haight-prev`)"
+        src="https://res.cloudinary.com/dft4ibxgp/image/upload/v1590266971/One%20Mile%20Radius/camera_enhance-24px_vvjhfx.svg"
+        alt="Lower Haight Camera"
+      />
+      <img
+        class="nopa-camera"
+        id="nopa-camera-id"
+        onclick="showSlides(slideIndex=1, `nopa-slideshow`, `nopa-photo-position`, `nopa-slides`, `nopa-close`, `nopa-next`, `nopa-prev`)"
+        src="https://res.cloudinary.com/dft4ibxgp/image/upload/v1590266971/One%20Mile%20Radius/camera_enhance-24px_vvjhfx.svg"
+        alt="Nopa Camera"
+      />
+      <img
+        class="alamo-sq-camera"
+        id="alamo-sq-camera-id"
+        onclick="showSlides(slideIndex=1, `alamo-sq-slideshow`, `alamo-sq-photo-position`, `alamo-sq-slides`, `alamo-sq-close`, `alamo-sq-next`, `alamo-sq-prev`)"
+        src="https://res.cloudinary.com/dft4ibxgp/image/upload/v1590266971/One%20Mile%20Radius/camera_enhance-24px_vvjhfx.svg"
+        alt="Alamo Square Camera"
+      />
+      <img
+        class="ashbury-heights-camera"
+        id="ashbury-heights-camera-id"
+        onclick="showSlides(slideIndex=1, `ashbury-heights-slideshow`, `ashbury-heights-photo-position`, `ashbury-heights-slides`, `ashbury-heights-close`, `ashbury-heights-next`, `ashbury-heights-prev`)"
+        src="https://res.cloudinary.com/dft4ibxgp/image/upload/v1590266971/One%20Mile%20Radius/camera_enhance-24px_vvjhfx.svg"
+        alt="Ashbury Heights Camera"
+      />
+      <img
+        class="corona-heights-camera"
+        id="corona-heights-camera-id"
+        onclick="showSlides(slideIndex=1, `corona-heights-slideshow`, `corona-heights-photo-position`, `corona-heights-slides`, `corona-heights-close`, `corona-heights-next`, `corona-heights-prev`)"
+        src="https://res.cloudinary.com/dft4ibxgp/image/upload/v1590266971/One%20Mile%20Radius/camera_enhance-24px_vvjhfx.svg"
+        alt="Corona Heights Camera"
+      />
+      <img
+        class="cole-valley-camera"
+        id="cole-valley-camera-id"
+        onclick="showSlides(slideIndex=1, `cole-valley-slideshow`, `cole-valley-photo-position`, `cole-valley-slides`, `cole-valley-close`, `cole-valley-next`, `cole-valley-prev`)"
+        src="https://res.cloudinary.com/dft4ibxgp/image/upload/v1590266971/One%20Mile%20Radius/camera_enhance-24px_vvjhfx.svg"
+        alt="Cole Valley Camera"
+      />
+      <img
+        class="eureka-valley-camera"
+        id="eureka-valley-camera-id"
+        onclick="showSlides(slideIndex=1, `eureka-valley-slideshow`, `eureka-valley-photo-position`, `eureka-valley-slides`, `eureka-valley-close`, `eureka-valley-next`, `eureka-valley-prev`)"
+        src="https://res.cloudinary.com/dft4ibxgp/image/upload/v1590266971/One%20Mile%20Radius/camera_enhance-24px_vvjhfx.svg"
+        alt="Eureka Valley Camera"
+      />
+      <img
+        class="castro-camera"
+        id="castro-camera-id"
+        onclick="showSlides(slideIndex=1, `castro-slideshow`, `castro-photo-position`, `castro-slides`, `castro-close`, `castro-next`, `castro-prev`)"
+        src="https://res.cloudinary.com/dft4ibxgp/image/upload/v1590266971/One%20Mile%20Radius/camera_enhance-24px_vvjhfx.svg"
+        alt="Castro Camera"
+      />
+      <img
+      class="dolores-heights-camera"
+      id="dolores-heights-camera-id"
+      onclick="showSlides(slideIndex=1, `dolores-heights-slideshow`, `dolores-heights-photo-position`, `dolores-heights-slides`, `dolores-heights-close`, `dolores-heights-next`, `dolores-heights-prev`)"
+      src="https://res.cloudinary.com/dft4ibxgp/image/upload/v1590266971/One%20Mile%20Radius/camera_enhance-24px_vvjhfx.svg"
+      alt="Dolores Heights Camera"
+    />
+    <img
+    class="mission-dolores-camera"
+    id="mission-dolores-camera-id"
+    onclick="showSlides(slideIndex=1, `mission-dolores-slideshow`, `mission-dolores-photo-position`, `mission-dolores-slides`, `mission-dolores-close`, `mission-dolores-next`, `mission-dolores-prev`)"
+    src="https://res.cloudinary.com/dft4ibxgp/image/upload/v1590266971/One%20Mile%20Radius/camera_enhance-24px_vvjhfx.svg"
+    alt="Mission Dolores Camera"
+  />
+  <img
+    class="lower-market-camera"
+    id="lower-market-camera-id"
+    onclick="showSlides(slideIndex=1, `lower-market-slideshow`, `lower-market-photo-position`, `lower-market-slides`, `lower-market-close`, `lower-market-next`, `lower-market-prev`)"
+    src="https://res.cloudinary.com/dft4ibxgp/image/upload/v1590266971/One%20Mile%20Radius/camera_enhance-24px_vvjhfx.svg"
+    alt="Lower Market  Camera"
+  />
+  <img
+    class="mission-camera"
+    id="mission-camera-id"
+    onclick="showSlides(slideIndex=1, `mission-slideshow`, `mission-photo-position`, `mission-slides`, `mission-close`, `mission-next`, `mission-prev`)"
+    src="https://res.cloudinary.com/dft4ibxgp/image/upload/v1590266971/One%20Mile%20Radius/camera_enhance-24px_vvjhfx.svg"
+    alt="Mission Camera"
+  />
+    </div>
+    <!-- Panhandle Slideshow container -->
+    <div class="slideshow-div" id="panhandle-slideshow">
+     
+      <div class="panhandle-slides">
+        <img
+          src="https://res.cloudinary.com/dft4ibxgp/image/upload/v1589753780/One%20Mile%20Radius/Panhandle/2020-04-17_06.33.41_oirqmf.jpg"
+          alt="Victorian"
+        />
+      </div>
+      <div class="panhandle-slides">
+        <img
+          src="https://res.cloudinary.com/dft4ibxgp/image/upload/v1589753804/One%20Mile%20Radius/Panhandle/2020-04-17_07.46.46_tcph7m.jpg"
+          alt="Green House"
+        />
+      </div>
+      <div class="panhandle-slides">
+        <img
+          src="https://res.cloudinary.com/dft4ibxgp/image/upload/v1589753806/One%20Mile%20Radius/Panhandle/2020-04-17_07.37.17_hqufxv.jpg"
+          alt="Blue House"
+        />
+      </div>
+      <!-- Next and previous buttons -->
+      <a
+        class="prev"
+        id="panhandle-prev"
+        onclick="prevSlide(`panhandle-slideshow`, `panhandle-photo-position`, `panhandle-slides`, `panhandle-close`, `panhandle-next`, `panhandle-prev`)"
+        >&#10094;</a
+      >
+      <a
+        class="next"
+        id="panhandle-next"
+        onclick="nextSlide(`panhandle-slideshow`, `panhandle-photo-position`,`panhandle-slides`, `panhandle-close`, `panhandle-next`, `panhandle-prev`)"
+        >&#10095;</a
+      >
+      <div
+        class="close-button"
+        id="panhandle-close"
+        onclick="hideSlides(`panhandle-slideshow`, `panhandle-photo-position`,`panhandle-slides`, `panhandle-close`, `panhandle-next`, `panhandle-prev`)"
+      >
+        Close
+      </div>
+    </div>
+    <!-- Haight Slideshow container -->
+    <div class="slideshow-div" id="haight-slideshow">
+      <div class="haight-slides">
+        <img
+          src="https://res.cloudinary.com/dft4ibxgp/image/upload/v1589756206/One%20Mile%20Radius/Haight%20Ashbury/2020-04-08_06.42.55_e4sheg.jpg"
+          alt="Haight Street Stores Closed"
+        />
+      </div>
+
+      <div class="haight-slides">
+        <img
+          src="https://res.cloudinary.com/dft4ibxgp/image/upload/v1589755977/One%20Mile%20Radius/Haight%20Ashbury/2020-04-09_07.12.24_thwg7n.jpg"
+          alt="Ben & Jerry's on Haight Street"
+        />
+      </div>
+
+      <div class="haight-slides">
+        <img
+          src="https://res.cloudinary.com/dft4ibxgp/image/upload/v1589755977/One%20Mile%20Radius/Haight%20Ashbury/2020-04-09_07.12.40_beczb8.jpg"
+          alt="Corner of Haight & Ashbury"
+        />
+      </div>
+
+      <!-- Next and previous buttons -->
+      <a
+        class="prev"
+        id="haight-prev"
+        onclick="prevSlide(`haight-slideshow`, `haight-photo-position`, `haight-slides`, `haight-close`, `haight-next`, `haight-prev`)"
+        >&#10094;</a
+      >
+      <a
+        class="next"
+        id="haight-next"
+        onclick="nextSlide(`haight-slideshow`, `haight-photo-position`, `haight-slides`, `haight-close`, `haight-next`, `haight-prev`)"
+        >&#10095;</a
+      >
+      <div
+        class="close-button"
+        id="haight-close"
+        onclick="hideSlides(`haight-slideshow`, `haight-photo-position`, `haight-slides`, `haight-close`, `haight-next`, `haight-prev`)"
+      >Close
+      </div>
+    </div>
+    <!-- Dubocce Slideshow container -->
+    <div class="slideshow-div" id="duboce-slideshow">
+      <div class="duboce-slides">
+        <img
+          src="https://res.cloudinary.com/dft4ibxgp/image/upload/v1589755194/One%20Mile%20Radius/Duboce%20Triangle/2020-04-11_10.43.57_bj6fet.jpg"
+          alt="The Mint"
+        />
+      </div>
+
+      <div class="duboce-slides">
+        <img
+          src="https://res.cloudinary.com/dft4ibxgp/image/upload/v1589755467/One%20Mile%20Radius/Duboce%20Triangle/2020-04-11_09.03.08_urdkq3.jpg"
+          alt="Mural on 16th Street & Market"
+        />
+      </div>
+
+      <div class="duboce-slides">
+        <img
+          src="https://res.cloudinary.com/dft4ibxgp/image/upload/v1589756047/One%20Mile%20Radius/Duboce%20Triangle/2020-04-08_08.00.30_ubduun.jpg"
+          alt="View down Duboce Street"
+        />
+      </div>
+
+      <!-- Next and previous buttons -->
+      <a
+        class="prev"
+        id="duboce-prev"
+        onclick="prevSlide(`duboce-slideshow`, `duboce-photo-position`, `duboce-slides`, `duboce-close`, `duboce-next`, `duboce-prev`)"
+        >&#10094;</a
+      >
+      <a
+        class="next"
+        id="duboce-next"
+        onclick="nextSlide(`duboce-slideshow`, `duboce-photo-position`, `duboce-slides`, `duboce-close`, `duboce-next`, `duboce-prev`)"
+        >&#10095;</a
+      >
+      <div
+        class="close-button"
+        id="duboce-close"
+        onclick="hideSlides(`duboce-slideshow`, `duboce-photo-position`, `duboce-slides`, `duboce-close`, `duboce-next`, `duboce-prev`)"
+      >
+        Close
+      </div>
+    </div>
+    <!-- Hayes Valley -->
+    <div class="slideshow-div" id="hayes-slideshow">
+      <div class="hayes-slides">
+        <img
+          src="https://res.cloudinary.com/dft4ibxgp/image/upload/v1591472388/One%20Mile%20Radius/Hayes%20Valley/IMG_5227_inmqhi.jpg"
+          alt="Hayes shopping area closed down"
+        />
+      </div>
+
+      <div class="hayes-slides">
+        <img
+          src="https://res.cloudinary.com/dft4ibxgp/image/upload/v1591472383/One%20Mile%20Radius/Hayes%20Valley/IMG_5225_bgrhkg.jpg"
+          alt="Hayes Valley park"
+        />
+      </div>
+
+      <div class="hayes-slides">
+        <img
+          src="https://res.cloudinary.com/dft4ibxgp/image/upload/v1589741158/One%20Mile%20Radius/Hayes%20Valley/2020-04-26_11.06.07_rvwnoa.jpg"
+          alt="Hayes Valley mural"
+        />
+      </div>
+
+      <!-- Next and previous buttons -->
+      <a
+        class="prev"
+        id="hayes-prev"
+        onclick="prevSlide(`hayes-slideshow`, `hayes-photo-position`, `hayes-slides`, `hayes-close`, `hayes-next`, `hayes-prev`)"
+        >&#10094;</a
+      >
+      <a
+        class="next"
+        id="hayes-next"
+        onclick="nextSlide(`hayes-slideshow`, `hayes-photo-position`, `hayes-slides`, `hayes-close`, `hayes-next`, `hayes-prev`)"
+        >&#10095;</a
+      >
+      <div
+        class="close-button"
+        id="hayes-close"
+        onclick="hideSlides(`hayes-slideshow`, `hayes-photo-position`, `hayes-slides`, `hayes-close`, `hayes-next`, `hayes-prev`)"
+      >
+        Close
+      </div>
+    </div>
+    <!-- Lower Haight -->
+    <div class="slideshow-div" id="lower-haight-slideshow">
+      <div class="lower-haight-slides">
+        <img
+          src="https://res.cloudinary.com/dft4ibxgp/image/upload/v1589756521/One%20Mile%20Radius/Lower%20Haight/2020-04-07_06.26.30_ybxsry.jpg"
+          alt="Chubby Bunny"
+        />
+      </div>
+      <div class="lower-haight-slides">
+        <img
+          src="https://res.cloudinary.com/dft4ibxgp/image/upload/v1591473700/One%20Mile%20Radius/Lower%20Haight/IMG_5451_twy4fc.jpg"
+          alt="Lower Haight empty street at dawn"
+        />
+      </div>
+      <div class="lower-haight-slides">
+        <img
+          src="https://res.cloudinary.com/dft4ibxgp/image/upload/v1591473700/One%20Mile%20Radius/Lower%20Haight/IMG_5496_xx8bbw.jpg"
+          alt="Lower Haight closed stores"
+        />
+      </div>
+      <!-- Next and previous buttons -->
+      <a
+        class="prev"
+        id="lower-haight-prev"
+        onclick="prevSlide(`lower-haight-slideshow`, `lower-haight-photo-position`, `lower-haight-slides`, `lower-haight-close`, `lower-haight-next`, `lower-haight-prev`)"
+        >&#10094;</a
+      >
+      <a
+        class="next"
+        id="lower-haight-next"
+        onclick="nextSlide(`lower-haight-slideshow`, `lower-haight-photo-position`, `lower-haight-slides`, `lower-haight-close`, `lower-haight-next`, `lower-haight-prev`)"
+        >&#10095;</a
+      >
+      <div
+        class="close-button"
+        id="lower-haight-close"
+        onclick="hideSlides(`lower-haight-slideshow`, `lower-haight-photo-position`, `lower-haight-slides`, `lower-haight-close`, `lower-haight-next`, `lower-haight-prev`)"
+      >
+        Close
+      </div>
+    </div>
+    <!-- NOPA  -->
+    <div class="slideshow-div" id="nopa-slideshow">
+      <div class="nopa-slides">
+        <img
+          src="https://res.cloudinary.com/dft4ibxgp/image/upload/v1591474261/One%20Mile%20Radius/Nopa/IMG_5532_z8ktgo.jpg"
+          alt="Rock Church in NOPA"
+        />
+      </div>
+      <div class="nopa-slides">
+        <img
+          src="https://res.cloudinary.com/dft4ibxgp/image/upload/v1591474256/One%20Mile%20Radius/Nopa/IMG_5537_j7lhnl.jpg"
+          alt="Empty street in NOPA"
+        />
+      </div>
+      <div class="nopa-slides">
+        <img
+          src="https://res.cloudinary.com/dft4ibxgp/image/upload/v1591474255/One%20Mile%20Radius/Nopa/IMG_5534_ke3lda.jpg"
+          alt="Sudzee in NOPA"
+        />
+      </div>
+      <!-- Next and previous buttons -->
+      <a
+        class="prev"
+        id="nopa-prev"
+        onclick="prevSlide(`nopa-slideshow`, `nopa-photo-position`, `nopa-slides`, `nopa-close`, `nopa-next`, `nopa-prev`)"
+        >&#10094;</a
+      >
+      <a
+        class="next"
+        id="nopa-next"
+        onclick="nextSlide(`nopa-slideshow`, `nopa-photo-position`, `nopa-slides`, `nopa-close`, `nopa-next`, `nopa-prev`)"
+        >&#10095;</a
+      >
+      <div
+        class="close-button"
+        id="nopa-close"
+        onclick="hideSlides(`nopa-slideshow`, `nopa-photo-position`, `nopa-slides`, `nopa-close`, `nopa-next`, `nopa-prev`)"
+      >
+        Close
+      </div>
+    </div>
+    <!-- Alamo Square  -->
+    <div class="slideshow-div" id="alamo-sq-slideshow">
+      <div class="alamo-sq-slides">
+        <img
+          src="https://res.cloudinary.com/dft4ibxgp/image/upload/v1591474634/One%20Mile%20Radius/Alamo%20Square/IMG_5244_awpyik.jpg"
+          alt="Painted Ladies block"
+        />
+      </div>
+      <div class="alamo-sq-slides">
+        <img
+          src="https://res.cloudinary.com/dft4ibxgp/image/upload/v1591474628/One%20Mile%20Radius/Alamo%20Square/IMG_5242_z0jgpy.jpg"
+          alt="Empty street in Alamo Square"
+        />
+      </div>
+      <div class="alamo-sq-slides">
+        <img
+          src="https://res.cloudinary.com/dft4ibxgp/image/upload/v1591474628/One%20Mile%20Radius/Alamo%20Square/IMG_5247_bksf2u.jpg"
+          alt="View of SF from Alamo Square"
+        />
+      </div>
+      <!-- Next and previous buttons -->
+      <a
+        class="prev"
+        id="alamo-sq-prev"
+        onclick="prevSlide(`alamo-sq-slideshow`, `alamo-sq-photo-position`, `alamo-sq-slides`, `alamo-sq-close`, `alamo-sq-next`, `alamo-sq-prev`)"
+        >&#10094;</a
+      >
+      <a
+        class="next"
+        id="alamo-sq-next"
+        onclick="nextSlide(`alamo-sq-slideshow`, `alamo-sq-photo-position`, `alamo-sq-slides`, `alamo-sq-close`, `alamo-sq-next`, `alamo-sq-prev`)"
+        >&#10095;</a
+      >
+      <div
+        class="close-button"
+        id="alamo-sq-close"
+        onclick="hideSlides(`alamo-sq-slideshow`, `alamo-sq-photo-position`, `alamo-sq-slides`, `alamo-sq-close`, `alamo-sq-next`, `alamo-sq-prev`)"
+      >
+        Close
+      </div>
+    </div>
+    <!-- Ashbury Heights -->
+    <div class="slideshow-div" id="ashbury-heights-slideshow">
+      <div class="ashbury-heights-slides">
+        <img
+          src="https://res.cloudinary.com/dft4ibxgp/image/upload/v1589754296/One%20Mile%20Radius/Ashbury%20Heights/2020-04-14_07.37.07_dc9ybn.jpg"
+          alt="Ashbury Heights Victorians"
+        />
+      </div>
+      <div class="ashbury-heights-slides">
+        <img
+          src="https://res.cloudinary.com/dft4ibxgp/image/upload/v1589754296/One%20Mile%20Radius/Ashbury%20Heights/2020-04-14_07.31.54_czmngz.jpg"
+          alt="Empty street Ashbury Heights"
+        />
+      </div>
+      <div class="ashbury-heights-slides">
+        <img
+          src="https://res.cloudinary.com/dft4ibxgp/image/upload/v1589754296/One%20Mile%20Radius/Ashbury%20Heights/2020-04-14_07.31.54_czmngz.jpg"
+          alt="Ashbury Heights view"
+        />
+      </div>
+      <!-- Next and previous buttons -->
+      <a
+        class="prev"
+        id="ashbury-heights-prev"
+        onclick="prevSlide(`ashbury-heights-slideshow`, `ashbury-heights-photo-position`, `ashbury-heights-slides`, `ashbury-heights-close`, `ashbury-heights-next`, `ashbury-heights-prev`)"
+        >&#10094;</a
+      >
+      <a
+        class="next"
+        id="ashbury-heights-next"
+        onclick="nextSlide(`ashbury-heights-slideshow`, `ashbury-heights-photo-position`, `ashbury-heights-slides`, `ashbury-heights-close`, `ashbury-heights-next`, `ashbury-heights-prev`)"
+        >&#10095;</a
+      >
+      <div
+        class="close-button"
+        id="ashbury-heights-close"
+        onclick="hideSlides(`ashbury-heights-slideshow`, `ashbury-heights-photo-position`, `ashbury-heights-slides`, `ashbury-heights-close`, `ashbury-heights-next`, `ashbury-heights-prev`)"
+      >
+        Close
+      </div>
+    </div>
+    <!-- Corona Heights -->
+    <div class="slideshow-div" id="corona-heights-slideshow">
+          <div class="corona-heights-slides">
+            <img
+              src="https://res.cloudinary.com/dft4ibxgp/image/upload/v1589755672/One%20Mile%20Radius/Corona%20Heights/2020-04-10_13.23.25_t6vpmk.jpg"
+              alt="Beautiful view from Corona Heights"
+            />
+          </div>
+          <div class="corona-heights-slides">
+            <img
+               src="https://res.cloudinary.com/dft4ibxgp/image/upload/v1589755667/One%20Mile%20Radius/Corona%20Heights/2020-04-10_13.02.11_jhqnxg.jpg"
+              alt="Victorian on hill in Corona Heights"
+            />
+          </div>
+          <div class="corona-heights-slides">
+            <img
+              src="https://res.cloudinary.com/dft4ibxgp/image/upload/v1591568671/One%20Mile%20Radius/Corona%20Heights/IMG_2427_hcatfl.jpg"
+              alt="Corona Heights neighborhood"
+            />
+          </div>
+          <!-- Next and previous buttons -->
+          <a
+            class="prev"
+            id="corona-heights-prev"
+            onclick="prevSlide(`corona-heights-slideshow`, `corona-heights-photo-position`, `corona-heights-slides`, `corona-heights-close`, `corona-heights-next`, `corona-heights-prev`)"
+            >&#10094;</a
+          >
+          <a
+            class="next"
+            id="corona-heights-next"
+            onclick="nextSlide(`corona-heights-slideshow`, `corona-heights-photo-position`, `corona-heights-slides`, `corona-heights-close`, `corona-heights-next`, `corona-heights-prev`)"
+            >&#10095;</a
+          >
+          <div
+            class="close-button"
+            id="corona-heights-close"
+            onclick="hideSlides(`corona-heights-slideshow`, `corona-heights-photo-position`, `corona-heights-slides`, `corona-heights-close`, `corona-heights-next`, `corona-heights-prev`)"
+          >Close</div>
+    </div>
+    <!-- Cole Valley -->
+    <div class="slideshow-div" id="cole-valley-slideshow">
+      <div class="cole-valley-slides">
+        <img
+           src="https://res.cloudinary.com/dft4ibxgp/image/upload/v1589755983/One%20Mile%20Radius/Haight%20Ashbury/2020-04-09_07.48.41_llevjw.jpg"
+          alt="Yellow Victorian in Cole Valley"
+        />
+      </div>
+      <div class="cole-valley-slides">
+        <img
+           src="https://res.cloudinary.com/dft4ibxgp/image/upload/v1589755985/One%20Mile%20Radius/Haight%20Ashbury/2020-04-09_07.55.19_q9i7he.jpg"
+          alt="Cole Hardware Store"
+        />
+      </div>
+      <div class="cole-valley-slides">
+        <img
+           src="https://res.cloudinary.com/dft4ibxgp/image/upload/v1592264993/One%20Mile%20Radius/Ashbury%20Heights/IMG_6093_uebkq0.jpg"
+          alt="Pointed Victorians in Cole Valley"
+        />
+      </div>
+      <!-- Next and previous buttons -->
+      <a
+        class="prev"
+        id="cole-valley-prev"
+        onclick="prevSlide(`cole-valley-slideshow`, `cole-valley-photo-position`, `cole-valley-slides`, `cole-valley-close`, `cole-valley-next`, `cole-valley-prev`)"
+        >&#10094;</a
+      >
+      <a
+        class="next"
+        id="cole-valley-next"
+        onclick="nextSlide(`cole-valley-slideshow`, `cole-valley-photo-position`, `cole-valley-slides`, `cole-valley-close`, `cole-valley-next`, `cole-valley-prev`)"
+        >&#10095;</a
+      >
+      <div
+        class="close-button"
+        id="cole-valley-close"
+        onclick="hideSlides(`cole-valley-slideshow`, `cole-valley-photo-position`, `cole-valley-slides`, `cole-valley-close`, `cole-valley-next`, `cole-valley-prev`)"
+      >
+        Close
+      </div>
+    </div>
+    <!-- Eureka Valley -->
+    <div class="slideshow-div" id="eureka-valley-slideshow">
+          <div class="eureka-valley-slides">
+            <img
+              src="https://res.cloudinary.com/dft4ibxgp/image/upload/v1589754413/One%20Mile%20Radius/Eureka%20Valley/2020-04-15_07.50.19_dgri4a.jpg"
+              alt="Hill in Eureka Valley"
+            />
+          </div>
+          <div class="eureka-valley-slides">
+            <img
+              src="https://res.cloudinary.com/dft4ibxgp/image/upload/v1589754391/One%20Mile%20Radius/Eureka%20Valley/2020-04-15_06.39.48_a6065a.jpg"
+              alt="Sunrise in Eureka Valley"
+            />
+          </div>
+          <div class="eureka-valley-slides">
+            <img
+              src="https://res.cloudinary.com/dft4ibxgp/image/upload/v1589754398/One%20Mile%20Radius/Eureka%20Valley/2020-04-15_06.45.45_uyqtiq.jpg"
+              alt="Empty street in Eureka Valley"
+            />
+          </div>
+          <!-- Next and previous buttons -->
+          <a
+            class="prev"
+            id="eureka-valley-prev"
+            onclick="prevSlide(`eureka-valley-slideshow`, `eureka-valley-photo-position`, `eureka-valley-slides`, `eureka-valley-close`, `eureka-valley-next`, `eureka-valley-prev`)"
+            >&#10094;</a
+          >
+          <a
+            class="next"
+            id="eureka-valley-next"
+            onclick="nextSlide(`eureka-valley-slideshow`, `eureka-valley-photo-position`, `eureka-valley-slides`, `eureka-valley-close`, `eureka-valley-next`, `eureka-valley-prev`)"
+            >&#10095;</a
+          >
+          <div
+            class="close-button"
+            id="eureka-valley-close"
+            onclick="hideSlides(`eureka-valley-slideshow`, `eureka-valley-photo-position`, `eureka-valley-slides`, `eureka-valley-close`, `eureka-valley-next`, `eureka-valley-prev`)"
+          >Close</div>
+    </div>
+    <!-- Castro  -->
+    <div class="slideshow-div" id="castro-slideshow">
+      <div class="castro-slides">
+        <img
+          src="https://res.cloudinary.com/dft4ibxgp/image/upload/v1589754749/One%20Mile%20Radius/Castro/2020-04-13_07.24.18_kbdtev.jpg"
+          alt="Empty Castro Street"
+        />
+      </div>
+      <div class="castro-slides">
+        <img
+          src="https://res.cloudinary.com/dft4ibxgp/image/upload/v1589754750/One%20Mile%20Radius/Castro/2020-04-13_07.28.36_nfzxjj.jpg"
+          alt="Moby Dick's on Castro Street"
+        />
+      </div>
+      <div class="castro-slides">
+        <img
+          src="https://res.cloudinary.com/dft4ibxgp/image/upload/v1589754738/One%20Mile%20Radius/Castro/2020-04-13_07.14.35_mbccy6.jpg"
+          alt="Beautiful street near the Castro"
+        />
+      </div>
+      <!-- Next and previous buttons -->
+      <a
+        class="prev"
+        id="castro-prev"
+        onclick="prevSlide(`castro-slideshow`, `castro-photo-position`, `castro-slides`, `castro-close`, `castro-next`, `castro-prev`)"
+        >&#10094;</a
+      >
+      <a
+        class="next"
+        id="castro-next"
+        onclick="nextSlide(`castro-slideshow`, `castro-photo-position`, `castro-slides`, `castro-close`, `castro-next`, `castro-prev`)"
+        >&#10095;</a
+      >
+      <div
+            class="close-button"
+            id="castro-close"
+            onclick="hideSlides(`castro-slideshow`, `castro-photo-position`, `castro-slides`, `castro-close`, `castro-next`, `castro-prev`)"
+          >Close</div>
+    </div>
+    <!-- Dolores Heights  -->
+    <div class="slideshow-div" id="dolores-heights-slideshow">
+      <div class="dolores-heights-slides">
+        <img
+           src="https://res.cloudinary.com/dft4ibxgp/image/upload/v1591569034/One%20Mile%20Radius/Dolores%20Heights%20%28Noe%20Valley%29/IMG_6837_wtoydf.jpg"
+          alt="Empty street in Noe Valley"
+        />
+      </div>
+      <div class="dolores-heights-slides">
+        <img
+           src="https://res.cloudinary.com/dft4ibxgp/image/upload/v1591569030/One%20Mile%20Radius/Dolores%20Heights%20%28Noe%20Valley%29/IMG_6834_mab1t6.jpg"
+          alt="Victorians in Noe eureka-valley-camera"
+        />
+      </div>
+      <div class="dolores-heights-slides">
+        <img
+           src="https://res.cloudinary.com/dft4ibxgp/image/upload/v1591569030/One%20Mile%20Radius/Dolores%20Heights%20%28Noe%20Valley%29/IMG_4026_duzqfi.jpg"
+          alt="Sunrise in Noe Valley"
+        />
+      </div>
+      <!-- Next and previous buttons -->
+      <a
+        class="prev"
+        id="dolores-heights-prev"
+        onclick="prevSlide(`dolores-heights-slideshow`, `dolores-heights-photo-position`, `dolores-heights-slides`, `dolores-heights-close`, `dolores-heights-next`, `dolores-heights-prev`)"
+        >&#10094;</a
+      >
+      <a
+        class="next"
+        id="dolores-heights-next"
+        onclick="nextSlide(`dolores-heights-slideshow`, `dolores-heights-photo-position`, `dolores-heights-slides`, `dolores-heights-close`, `dolores-heights-next`, `dolores-heights-prev`)"
+        >&#10095;</a
+      >
+      <div
+        class="close-button"
+        id="dolores-heights-close"
+        onclick="hideSlides(`dolores-heights-slideshow`, `dolores-heights-photo-position`, `dolores-heights-slides`, `dolores-heights-close`, `dolores-heights-next`, `dolores-heights-prev`)"
+        >Close
+      </div>
+    </div>
+    <!-- Mission Dolores -->
+    <div class="slideshow-div" id="mission-dolores-slideshow">
+        <div class="mission-dolores-slides">
+          <img
+            src="https://res.cloudinary.com/dft4ibxgp/image/upload/v1589743181/One%20Mile%20Radius/Mission%20Dolores/2020-04-18_09.40.36_cmgsfj.jpg"
+            alt="The Mission Dolores"
+          />
+        </div>
+        <div class="mission-dolores-slides">
+          <img
+            src="https://res.cloudinary.com/dft4ibxgp/image/upload/v1589743167/One%20Mile%20Radius/Mission%20Dolores/2020-04-18_08.19.20_xgzywl.jpg"
+            alt="Mission Dolores Park"
+          />
+        </div>
+        <div class="mission-dolores-slides">
+          <img
+            src="https://res.cloudinary.com/dft4ibxgp/image/upload/v1589742399/One%20Mile%20Radius/Mission%20Dolores/2020-04-21_07.43.26_cfydyo.jpg"
+            alt="Empty Dolores Street"
+          />
+        </div>
+        <!-- Next and previous buttons -->
+        <a
+          class="prev"
+          id="mission-dolores-prev"
+          onclick="prevSlide(`mission-dolores-slideshow`, `mission-dolores-photo-position`, `mission-dolores-slides`, `mission-dolores-close`, `mission-dolores-next`, `mission-dolores-prev`)"
+          >&#10094;</a
+        >
+        <a
+          class="next"
+          id="mission-dolores-next"
+          onclick="nextSlide(`mission-dolores-slideshow`, `mission-dolores-photo-position`, `mission-dolores-slides`, `mission-dolores-close`, `mission-dolores-next`, `mission-dolores-prev`)"
+          >&#10095;</a
+        >
+        <div
+          class="close-button"
+          id="mission-dolores-close"
+          onclick="hideSlides(`mission-dolores-slideshow`, `mission-dolores-photo-position`, `mission-dolores-slides`, `mission-dolores-close`, `mission-dolores-next`, `mission-dolores-prev`)"
+          >Close
+        </div>
+    </div>        
+      <!-- Lower Market Dolores -->
+    <div class="slideshow-div" id="lower-market-slideshow">
+      <div class="lower-market-slides">
+        <img
+          src="https://res.cloudinary.com/dft4ibxgp/image/upload/v1591485795/One%20Mile%20Radius/Lower%20Market/IMG_2555_k6gcip.jpg"
+          alt="Graffiti in Lower Market"
+        />
+      </div>
+      <div class="lower-market-slides">
+        <img
+          src="https://res.cloudinary.com/dft4ibxgp/image/upload/v1591486309/One%20Mile%20Radius/Lower%20Market/IMG_6978_ww0tby.jpg"
+          alt="Yellow Victorian in Lower Market"
+        />
+      </div>
+      <div class="lower-market-slides">
+        <img
+          src="https://res.cloudinary.com/dft4ibxgp/image/upload/v1591485989/One%20Mile%20Radius/Lower%20Market/IMG_2556_j3tsmu.jpg"
+          alt="By-Rite in Lower Market"
+        />
+      </div>
+      <!-- Next and previous buttons -->
+      <a
+        class="prev"
+        id="lower-market-prev"
+        onclick="prevSlide(`lower-market-slideshow`, `lower-market-photo-position`, `lower-market-slides`, `lower-market-close`, `lower-market-next`, `lower-market-prev`)"
+        >&#10094;</a
+      >
+      <a
+        class="next"
+        id="lower-market-next"
+        onclick="nextSlide(`lower-market-slideshow`, `lower-market-photo-position`, `lower-market-slides`, `lower-market-close`, `lower-market-next`, `lower-market-prev`)"
+        >&#10095;</a
+      >
+      <div
+        class="close-button"
+        id="lower-market-close"
+        onclick="hideSlides(`lower-market-slideshow`, `lower-market-photo-position`, `lower-market-slides`, `lower-market-close`, `lower-market-next`, `lower-market-prev`)"
+        >Close
+      </div>
+    </div>      
+    <!-- Mission -->
+    <div class="slideshow-div" id="mission-slideshow">
+        <div class="mission-slides">
+          <img
+            src="https://res.cloudinary.com/dft4ibxgp/image/upload/v1589743181/One%20Mile%20Radius/Mission%20Dolores/2020-04-18_09.58.55_zusej3.jpg"
+            alt="Closed stores in the Mission"
+          />
+        </div>
+        <div class="mission-slides">
+          <img
+            src="https://res.cloudinary.com/dft4ibxgp/image/upload/v1589743206/One%20Mile%20Radius/Mission%20Dolores/2020-04-18_13.11.15_ljjswa.jpg"
+            alt="Murals in the Mission"
+          />
+        </div>
+        <div class="mission-slides">
+          <img
+            src="https://res.cloudinary.com/dft4ibxgp/image/upload/v1589743173/One%20Mile%20Radius/Mission%20Dolores/2020-04-18_09.10.32_ezl5zl.jpg"
+            alt="El Capitan Theater in the Mission"
+          />
+        </div>
+        <!-- Next and previous buttons -->
+        <a
+          class="prev"
+          id="mission-prev"
+          onclick="prevSlide(`mission-slideshow`, `mission-photo-position`,  `mission-slides`, `mission-close`, `mission-next`, `mission-prev`)"
+          >&#10094;</a
+        >
+        <a
+          class="next"
+          id="mission-next"
+          onclick="nextSlide(`mission-slideshow`, `mission-photo-position`, `mission-slides`, `mission-close`, `mission-next`, `mission-prev`)"
+          >&#10095;</a
+        >
+        <div
+          class="close-button"
+          id="mission-close"
+          onclick="hideSlides(`mission-slideshow`, `mission-photo-position`, `mission-slides`, `mission-close`, `mission-next`, `mission-prev`)"
+          >Close
+        </div>
+    </div>    
+  </div>
+  <script src="js/script.js"></script>
+  </body>
+</html>

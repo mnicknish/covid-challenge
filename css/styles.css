@@ -1,0 +1,320 @@
+body {
+  font-family: Georgia;
+  background-color: white;
+}
+
+.lato {
+  font-family: "Lato", sans-serif;
+  text-decoration: none;
+}
+* {
+  box-sizing: border-box;
+}
+
+.covid-header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: black;
+  color: white;
+  padding: 1px 1px;
+  margin: 1px;
+  width: 100%;
+  justify-content: space-between;
+}
+.map-div {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  margin: 0px;
+  align-items: center;
+  position: relative;
+}
+.big-map {
+  width: 100%;
+  height: 100%;
+}
+.panhandle-photo-position {
+  position: absolute;
+  left: 10%;
+  top: 22%;
+}
+.panhandle-camera {
+  z-index: 1;
+  position: absolute;
+  left: 20%;
+  top: 32%;
+  padding: 0;
+}
+.haight-photo-position {
+  position: absolute;
+  left: 10%;
+  top: 29%;
+}
+.haight-camera {
+  z-index: 1;
+  position: absolute;
+  left: 20%;
+  top: 39%;
+}
+.duboce-photo-position {
+  position: absolute;
+  left: 40%;
+  top: 35%;
+}
+.duboce-camera {
+  z-index: 1;
+  position: absolute;
+  left: 50%;
+  top: 45%;
+}
+.hayes-photo-position {
+  position: absolute;
+  left: 60%;
+  top: 10%;
+}
+.hayes-camera {
+  z-index: 1;
+  position: absolute;
+  left: 70%;
+  top: 20%;
+}
+.lower-haight-photo-position {
+  position: absolute;
+  left: 40%;
+  top: 24%;
+}
+.lower-haight-camera {
+  z-index: 1;
+  position: absolute;
+  left: 50%;
+  top: 34%;
+}
+.nopa-photo-position {
+  position: absolute;
+  left: 20%;
+  top: 10%;
+}
+.nopa-camera {
+  z-index: 1;
+  position: absolute;
+  left: 30%;
+  top: 20%;
+}
+.alamo-sq-photo-position {
+  position: absolute;
+  left: 38%;
+  top: 11%;
+}
+.alamo-sq-camera {
+  z-index: 1;
+  position: absolute;
+  left: 48%;
+  top: 21%;
+}
+.ashbury-heights-photo-position {
+  position: absolute;
+  left: 15%;
+  top: 40%;
+}
+.ashbury-heights-camera {
+  z-index: 1;
+  position: absolute;
+  left: 25%;
+  top: 50%;
+}
+.cole-valley-photo-position {
+  position: absolute;
+  left: 5%;
+  top: 40%;
+}
+.cole-valley-camera {
+  z-index: 1;
+  position: absolute;
+  left: 15%;
+  top: 50%;
+}
+.corona-heights-photo-position {
+  position: absolute;
+  left: 20%;
+  top: 50%;
+}
+.corona-heights-camera {
+  z-index: 1;
+  position: absolute;
+  left: 30%;
+  top: 60%;
+}
+.eureka-valley-photo-position {
+  position: absolute;
+  left: 25%;
+  top: 60%;
+}
+.eureka-valley-camera {
+  z-index: 1;
+  position: absolute;
+  left: 35%;
+  top: 70%;
+}
+.castro-photo-position {
+  position: absolute;
+  left: 37%;
+  top: 52%;
+}
+.castro-camera {
+  z-index: 1;
+  position: absolute;
+  left: 47%;
+  top: 62%;
+}
+.dolores-heights-photo-position {
+  position: absolute;
+  left: 37%;
+  top: 62%;
+}
+.dolores-heights-camera {
+  z-index: 1;
+  position: absolute;
+  left: 47%;
+  top: 72%;
+}
+.mission-dolores-photo-position {
+  position: absolute;
+  left: 53%;
+  top: 56%;
+}
+.mission-dolores-camera {
+  z-index: 1;
+  position: absolute;
+  left: 63.5%;
+  top: 66%;
+}
+.lower-market-photo-position {
+  position: absolute;
+  left: 60%;
+  top: 35%;
+}
+.lower-market-camera {
+  z-index: 1;
+  position: absolute;
+  left: 70%;
+  top: 45%;
+}
+.mission-photo-position {
+  position: absolute;
+  left: 68%;
+  top: 50%;
+}
+.mission-camera {
+  z-index: 1;
+  position: absolute;
+  left: 78%;
+  top: 60%;
+}
+
+
+/* Slideshow container */
+.slideshow-div {
+  max-height: 320px;
+  background-color: white;
+  border: 2px solid white;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  z-index: 2;
+}
+.slideshow-div div > img {
+  max-height: 100%;
+  padding: 40px;
+  display: flex;
+  align-items: center;
+  z-index: 2;
+  background-color: #e2ffff;
+}
+
+/* Hide the images by default */
+.panhandle-slides,
+.haight-slides,
+.duboce-slides,
+.hayes-slides,
+.lower-haight-slides,
+.nopa-slides,
+.alamo-sq-slides,
+.ashbury-heights-slides,
+.corona-heights-slides,
+.cole-valley-slides,
+.eureka-valley-slides,
+.castro-slides,
+.dolores-heights-slides,
+.mission-dolores-slides,
+.lower-market-slides,
+.mission-slides {
+  display: none;
+  width: auto;
+  height: 300px;
+  z-index: 2;
+  align-items: center;
+}
+
+.close-button {
+  display: none;
+  border: 2px solid black;
+  background-color: #e2ffff;
+  color: black;
+  position: absolute;
+  border-radius: 6px;
+  bottom: 1px;
+  padding: 5px;
+  z-index: 2;
+  text-align: center;
+}
+
+/* Next & previous buttons */
+.prev,
+.next {
+  display: none;
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  margin-top: -22px;
+  padding: 8px;
+  color: black;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+  z-index: 2;
+}
+.prev {
+  left: 0;
+  border-radius: 0 3px 3px 0;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* Caption text */
+.text {
+  color: #f2f2f2;
+  font-size: 15px;
+  padding: 8px 12px;
+  position: absolute;
+  left: 10%;
+  top: 95%;
+  bottom: 8px;
+  width: 100%;
+  text-align: bottom;
+  z-index: 3;
+}
+
+h1,
+h2 {
+  font: 14px Lato, sans-serif;
+}
