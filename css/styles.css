@@ -37,7 +37,7 @@ body {
 .panhandle-photo-position {
   position: absolute;
   left: 10%;
-  top: 22%;
+  top: 32%;
 }
 .panhandle-camera {
   z-index: 1;
@@ -49,7 +49,7 @@ body {
 .haight-photo-position {
   position: absolute;
   left: 10%;
-  top: 29%;
+  top: 39%;
 }
 .haight-camera {
   z-index: 1;
@@ -60,7 +60,7 @@ body {
 .duboce-photo-position {
   position: absolute;
   left: 40%;
-  top: 35%;
+  top: 45%;
 }
 .duboce-camera {
   z-index: 1;
@@ -71,7 +71,7 @@ body {
 .hayes-photo-position {
   position: absolute;
   left: 60%;
-  top: 10%;
+  top: 20%;
 }
 .hayes-camera {
   z-index: 1;
@@ -82,7 +82,7 @@ body {
 .lower-haight-photo-position {
   position: absolute;
   left: 40%;
-  top: 24%;
+  top: 34%;
 }
 .lower-haight-camera {
   z-index: 1;
@@ -93,7 +93,7 @@ body {
 .nopa-photo-position {
   position: absolute;
   left: 20%;
-  top: 10%;
+  top: 20%;
 }
 .nopa-camera {
   z-index: 1;
@@ -104,7 +104,7 @@ body {
 .alamo-sq-photo-position {
   position: absolute;
   left: 38%;
-  top: 11%;
+  top: 21%;
 }
 .alamo-sq-camera {
   z-index: 1;
@@ -115,7 +115,7 @@ body {
 .ashbury-heights-photo-position {
   position: absolute;
   left: 15%;
-  top: 40%;
+  top: 50%;
 }
 .ashbury-heights-camera {
   z-index: 1;
@@ -126,7 +126,7 @@ body {
 .cole-valley-photo-position {
   position: absolute;
   left: 5%;
-  top: 40%;
+  top: 50%;
 }
 .cole-valley-camera {
   z-index: 1;
@@ -137,7 +137,7 @@ body {
 .corona-heights-photo-position {
   position: absolute;
   left: 20%;
-  top: 50%;
+  top: 60%;
 }
 .corona-heights-camera {
   z-index: 1;
@@ -148,7 +148,7 @@ body {
 .eureka-valley-photo-position {
   position: absolute;
   left: 25%;
-  top: 60%;
+  top: 70%;
 }
 .eureka-valley-camera {
   z-index: 1;
@@ -159,7 +159,7 @@ body {
 .castro-photo-position {
   position: absolute;
   left: 37%;
-  top: 52%;
+  top: 62%;
 }
 .castro-camera {
   z-index: 1;
@@ -170,7 +170,7 @@ body {
 .dolores-heights-photo-position {
   position: absolute;
   left: 37%;
-  top: 62%;
+  top: 72%;
 }
 .dolores-heights-camera {
   z-index: 1;
@@ -181,7 +181,7 @@ body {
 .mission-dolores-photo-position {
   position: absolute;
   left: 53%;
-  top: 56%;
+  top: 66%;
 }
 .mission-dolores-camera {
   z-index: 1;
@@ -192,7 +192,7 @@ body {
 .lower-market-photo-position {
   position: absolute;
   left: 60%;
-  top: 35%;
+  top: 45%;
 }
 .lower-market-camera {
   z-index: 1;
@@ -203,7 +203,7 @@ body {
 .mission-photo-position {
   position: absolute;
   left: 68%;
-  top: 50%;
+  top: 60%;
 }
 .mission-camera {
   z-index: 1;
