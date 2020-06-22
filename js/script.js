@@ -45,16 +45,19 @@ function hideSlides(
   currentMySlides,
   closeButton,
   nextSlide,
-  prevSlide) {
-    var i;
-    document.getElementById(prevSlide).style.display = "none";
-    document.getElementById(nextSlide).style.display = "none";
-    document.getElementById(closeButton).style.display = "none";
-    document.getElementById(currentSlideShow).classList.remove(currentPhotoPosition);
-    var slides = document.getElementsByClassName(currentMySlides);
-    for (i = 0; i < slides.length; i++) {
-      slides[i].style.display = "none";
-    }
+  prevSlide
+) {
+  var i;
+  document.getElementById(prevSlide).style.display = "none";
+  document.getElementById(nextSlide).style.display = "none";
+  document.getElementById(closeButton).style.display = "none";
+  document
+    .getElementById(currentSlideShow)
+    .classList.remove(currentPhotoPosition);
+  var slides = document.getElementsByClassName(currentMySlides);
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";
+  }
 }
 
 // When the user clicks the camera, open the carousel

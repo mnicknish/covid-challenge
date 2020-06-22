@@ -148,7 +148,7 @@ body {
 .eureka-valley-photo-position {
   position: absolute;
   left: 25%;
-  top: 70%;
+  top: 100%;
 }
 .eureka-valley-camera {
   z-index: 1;

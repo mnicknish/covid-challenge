@@ -20,6 +20,7 @@
       href="https://fonts.google.com/?category=Sans+Serif&selection.family=Lato:400,600,700"
       rel="stylesheet"
     />
+    <script type="text/javascript" src="https://www.dropbox.com/static/api/2/dropins.js" id="dropboxjs" data-app-key="6bwnlw8nn5l6ia6"></script>"
   </head>
   <body>
     <header class="covid-header">
@@ -29,13 +30,17 @@
       <h2>
         Walk every street within a 1 mile radius of our house in San Francisco
       </h2>
+      <h2>187 miles, 27,000 feet of climbing, 70 hours
+      </h2>
     </header>
     <div class="map-div">
+<!-- <div id="my-tooltip"></div> -->
       <img
         class="big-map"
         src="https://res.cloudinary.com/dft4ibxgp/image/upload/v1590266208/One%20Mile%20Radius/1-Mile_from_14th_Map_gucryh.jpg"
         alt="1 Mile Radius Map"
       />
+      <div>
       <img
         class="panhandle-camera"
         id="ph-camera-id"
@@ -43,6 +48,8 @@
         src="https://res.cloudinary.com/dft4ibxgp/image/upload/v1590266971/One%20Mile%20Radius/camera_enhance-24px_vvjhfx.svg"
         alt="Panhandle Camera"
         />
+        <p class="ph-hide">Panhandle Camera</p>
+      </div>
       <img
         class="haight-camera"
         id="haight-camera-id"
@@ -148,6 +155,13 @@
       onclick="showSlides(slideIndex=1, `mission-slideshow`, `mission-photo-position`, `mission-slides`, `mission-close`, `mission-next`, `mission-prev`)"
       src="https://res.cloudinary.com/dft4ibxgp/image/upload/v1590266971/One%20Mile%20Radius/camera_enhance-24px_vvjhfx.svg"
       alt="Mission Camera"
+    />
+    <img
+      class="dropbox-camera"
+      id="dropbox-camera-id"
+      onclick="showDropboxSlides(slideIndex=1, `dropbox-slideshow`, `dropbox-photo-position`, `dropbox-slides`, `dropbox-close`, `dropbox-next`, `dropbox-prev`)"
+      src="https://res.cloudinary.com/dft4ibxgp/image/upload/v1590266971/One%20Mile%20Radius/camera_enhance-24px_vvjhfx.svg"
+      alt="Dropbox Camera"
     />
     </div>
     <!-- Panhandle Slideshow container -->
